@@ -1,0 +1,16 @@
+{
+  "packages": {
+    "accounts-entry": {
+      "git": "https://github.com/Differential/accounts-entry.git",
+      "branch": "master"
+    },
+    "handlebars-server": {
+      "git": "https://github.com/EventedMind/meteor-handlebars-server.git"
+    },
+    "minimongoid": {},
+    "bootstrap-notebook-theme": {},
+    "autoform": {},
+    "momentjs": {},
+    "modernizr-meteor": {}
+  }
+}

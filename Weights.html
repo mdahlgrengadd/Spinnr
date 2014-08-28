@@ -1,0 +1,70 @@
+<!--template name="insertBookForm_OLD">
+  {{> quickForm collection="Weight" id="insertBookForm" type="insert"}}
+</template-->
+
+<template name="insertBookForm">
+    {{#autoForm collection="Weight" id="insertBookForm" type="insert"}}
+    <fieldset>
+        <!--legend>Add a Book</legend-->
+        {{> afQuickField name='weight'}}
+        {{> afQuickField name='date' value=defaultValue}}
+    </fieldset>
+    <button type="submit" class="btn btn-primary">Insert</button>
+    {{/autoForm}}
+</template>
+
+
+<!-- A modal that contains the bigger view of the image selected -->
+<template name="myModal">
+  <div class="modal fade in" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <!-- Form Name -->
+<h3>Enter food item</h3>
+        </div>
+        <div class="modal-body">
+
+
+          {{>insertBookForm}}
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="weights">
+    <div id="Weights">
+
+
+              <table class="table table-striped table-bordered table-hover">
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Weight</th>
+                    <th>Edit</th>
+                  </tr>
+                </thead>
+        {{#each weights}}
+            {{> weight}}
+        {{/each}}
+
+              </table>
+    </div>
+</template>
+
+<template name="weight">
+                <tbody>
+                  <tr >
+                                        <td>        <small>{{date}}</small> </td>
+                    <td>        <p>{{weight}}</p></td>
+
+                    <td>        <button type="button" data-value="{{_id}}" class="remove-item btn btn-danger" >delete</button></td>
+
+                  </tr>                 
+                </tbody>
+</template>
+

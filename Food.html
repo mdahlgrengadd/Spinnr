@@ -1,0 +1,75 @@
+<!--template name="insertFoodForm_OLD">
+  {{> quickForm collection="Foods" id="insertFoodForm" type="insert"}}
+</template-->
+
+<template name="insertFoodForm">
+    {{#autoForm collection="Food" id="insertFoodForm" type="insert"}}
+    <fieldset>
+        <!--legend>Add a Food</legend-->
+        {{> afQuickField name='name'}}
+        {{> afQuickField name='calories'}}
+
+        {{> afQuickField name='date' value=defaultValue}}
+    </fieldset>
+    <button type="submit" class="btn btn-primary">Insert</button>
+    {{/autoForm}}
+</template>
+
+
+<!-- A modal that contains the bigger view of the image selected -->
+<template name="foodsModal">
+  <div class="modal fade in" id="foodsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <!-- Form Name -->
+<h3>Enter food item</h3>
+        </div>
+        <div class="modal-body">
+
+
+          {{>insertFoodForm}}
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="foods">
+    <div id="Foods">
+
+
+              <table class="table table-striped table-bordered table-hover">
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Name</th>
+                    <th>Calories (kcal)</th>
+                    <th>Edit</th>
+                  </tr>
+                </thead>
+        {{#each foods}}
+            {{> food}}
+        {{/each}}
+
+              </table>
+    </div>
+</template>
+
+<template name="food">
+                <tbody>
+                  <tr >
+                                        <td>        <small>{{date}}</small> </td>
+                    <td>        <p>{{name}}</p></td>
+                                        <td>        <p>{{calories}}</p></td>
+
+
+                    <td>        <button type="button" data-value="{{_id}}" class="remove-item btn btn-danger" >delete</button></td>
+
+                  </tr>                 
+                </tbody>
+</template>
+
