@@ -1,29 +1,20 @@
-# meteor-boilerplate
+# Spinnr
 
-A starting point for meteorjs applications, includes Iron Router, Bootstrap 3, Font Awesome, LESS and Coffeescript.
+This is a start on making a soundcloud mixer app on meteor. It uses "Wavesurfer" for the sample view.
+Based on the meteor-boilerplate project. Accounts have been removed for now, maybe added later. 
 
-## What's included
 
-* File Structure
-* <a href="http://coffeescript.org/" target="_blank">Coffeescript</a>
-* <a href="http://lesscss.org/" target="_blank">LESS</a>
-* <a href="https://github.com/EventedMind/iron-router" target="_blank">Iron Router</a>
-* <a href="http://github.differential.io/accounts-entry" target="_blank">Accounts-Entry</a>
-* <a href="http://getbootstrap.com" target="_blank">Bootstrap 3.1.1</a>
-* <a href="http://fontawesome.io/" target="_blank">Font Awesome 4.1.0</a>
 
-## Installation
 
-Make sure you have Meteor and [Meteorite](https://github.com/oortcloud/meteorite/) installed, and then clone locally and run with `mrt`
-
-## File structure
+## More info from the meteor-boilderplate project...
+# File structure
 
 We have a common file structure we use across all of our meteorjs apps. The structure keeps view-dependent files together (`.html`, `.less`, `.coffee`).
 
 ```
 .meteor
 client
-  ├── accounts
+
   ├── compatibility
   ├── router
   └── stylesheets
@@ -51,10 +42,7 @@ packages
 public
   ├── fonts
   └── favicon.ico
-server
-  ├── views
-  ├── accounts.coffee
-  └── publications.coffee
+
 ```
 
 ## Responsive LESS Variables
